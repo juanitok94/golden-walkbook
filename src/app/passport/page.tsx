@@ -56,7 +56,7 @@ export default function PassportPage() {
           className="font-mono text-[10px] tracking-widest text-[#c8973a] opacity-60
                      hover:opacity-100 transition-opacity uppercase"
         >
-          ← Haywood Hoppers
+          ← Golden Walkbook
         </Link>
         <h1 className="font-serif text-3xl font-black text-[#f5edd8] mt-3">
           Your Passport
@@ -123,7 +123,7 @@ export default function PassportPage() {
         {/* North section */}
         <div className="flex items-center gap-3 mb-4">
           <p className="font-mono text-[10px] tracking-widest text-[#6b3f1e] opacity-60 uppercase whitespace-nowrap">
-            North of I-240
+            North of Clear Creek
           </p>
           <div className="flex-1 border-t border-dashed border-[#6b3f1e] opacity-30" />
         </div>
@@ -140,11 +140,11 @@ export default function PassportPage() {
           ))}
         </div>
 
-        {/* I-240 divider */}
+        {/* Clear Creek divider */}
         <div className="flex items-center gap-3 my-5">
           <div className="flex-1 h-px bg-[#b84c1a] opacity-40" />
           <span className="font-mono text-[10px] text-[#b84c1a] tracking-widest px-2">
-            I-240
+            Clear Creek
           </span>
           <div className="flex-1 h-px bg-[#b84c1a] opacity-40" />
         </div>
@@ -152,7 +152,7 @@ export default function PassportPage() {
         {/* South section */}
         <div className="flex items-center gap-3 mb-4">
           <p className="font-mono text-[10px] tracking-widest text-[#6b3f1e] opacity-60 uppercase whitespace-nowrap">
-            South of I-240
+            South of Clear Creek
           </p>
           <div className="flex-1 border-t border-dashed border-[#6b3f1e] opacity-30" />
         </div>
@@ -179,13 +179,13 @@ export default function PassportPage() {
               True Local
             </p>
             <p className="font-serif italic text-sm text-[#e8d9b8] mt-2 leading-relaxed">
-              You walked all of Haywood Road. East to west.
-              Past the roasters and the bakers and the kava bar,
-              under the interstate, past the little yellow house.
+              You walked all of Washington Ave. East to west.
+              Past the brewery and the distillery and the museum,
+              across Clear Creek, up to the Mines campus.
               This road is yours now.
             </p>
             <p className="font-mono text-[10px] text-[#c8973a] opacity-50 mt-4 tracking-widest">
-              #HaywoodHoppers · #TrueLocal
+              #GoldenWalkbook · #TrueLocal
             </p>
           </div>
         </div>

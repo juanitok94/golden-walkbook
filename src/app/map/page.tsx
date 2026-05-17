@@ -11,7 +11,7 @@ const shops = shopsData as any[]
 const layers = layersData as any[]
 
 // ── Geo helpers ──
-// All shops share roughly the same latitude (Haywood Rd runs east↔west).
+// All shops share roughly the same latitude (Washington Ave runs east↔west).
 // We project longitude → horizontal position on a 0-100 scale.
 const allLons = shops.map(s => s.coordinates[0])
 const minLon = Math.min(...allLons)
@@ -25,8 +25,8 @@ function lonToPercent(lon: number, flip: boolean): number {
   return flip ? 100 - pct : pct
 }
 
-// I-240 approximate longitude (between stop 4 and stop 5)
-const I240_LON = -82.5857
+// Clear Creek approximate longitude (between stop 4 and stop 5)
+const I240_LON = -105.2235
 
 // Sort core stops for the route line
 const coreStops = shops
@@ -89,7 +89,7 @@ export default function MapPage() {
           className="font-mono text-[10px] tracking-widest text-[#c8973a] opacity-60
                      hover:opacity-100 transition-opacity uppercase"
         >
-          ← Haywood Road Ledger
+          ← Golden Walkbook
         </Link>
         <h1 className="font-serif text-3xl font-black text-[#f5edd8] mt-2">
           The Map
@@ -161,7 +161,7 @@ export default function MapPage() {
               style={{ top: '50%', transform: 'translateY(-50%)' }}
             />
 
-            {/* I-240 crossing */}
+            {/* Clear Creek crossing */}
             <div
               className="absolute top-0 bottom-0 w-px transition-all duration-500"
               style={{ left: `${lonToPercent(I240_LON, flipped)}%` }}
@@ -169,7 +169,7 @@ export default function MapPage() {
               <div className="absolute inset-0 bg-[#b84c1a] opacity-30" />
               <div className="absolute top-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
                 <span className="font-mono text-[8px] text-[#b84c1a] tracking-widest bg-[#f5edd8]/80 px-1.5 py-0.5 rounded-sm">
-                  I-240
+                  Clear Creek
                 </span>
               </div>
             </div>
@@ -203,13 +203,13 @@ export default function MapPage() {
                     className="absolute font-mono text-[8px] tracking-widest text-[#6b3f1e] opacity-30 uppercase transition-all duration-500"
                     style={{ top: '8px', left: `${northCenter}%`, transform: 'translateX(-50%)' }}
                   >
-                    West Haywood
+                    The Mines Side
                   </div>
                   <div
                     className="absolute font-mono text-[8px] tracking-widest text-[#6b3f1e] opacity-30 uppercase transition-all duration-500"
                     style={{ top: '8px', left: `${southCenter}%`, transform: 'translateX(-50%)' }}
                   >
-                    East Haywood
+                    The Creek Side
                   </div>
                 </>
               )
@@ -492,7 +492,7 @@ export default function MapPage() {
                 {showDivider && (
                   <div className="flex items-center gap-3 my-2">
                     <div className="flex-1 h-px bg-[#b84c1a] opacity-30" />
-                    <span className="font-mono text-[9px] text-[#b84c1a] tracking-widest">I-240</span>
+                    <span className="font-mono text-[9px] text-[#b84c1a] tracking-widest">Clear Creek</span>
                     <div className="flex-1 h-px bg-[#b84c1a] opacity-30" />
                   </div>
                 )}

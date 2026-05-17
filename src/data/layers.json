@@ -2,82 +2,91 @@
   {
     "id": "coffee",
     "label": "Coffee",
-    "color": "#8B5E3C",
+    "color": "#8B5E3A",
     "bg": "#F5EDD8",
     "icon": "☕",
     "passportLayer": true,
-    "description": "The 10 core passport stops plus bonus hidden stamps"
+    "description": "The 10 core passport stops"
   },
   {
-    "id": "bakery",
-    "label": "Bakery",
-    "color": "#c8973a",
-    "bg": "#FDF3DC",
-    "icon": "🥐",
-    "passportLayer": false,
-    "description": "Bakeries with espresso bars — their own thing on Haywood"
-  },
-  {
-    "id": "bars",
-    "label": "Bars & Brew",
-    "color": "#2A6090",
-    "bg": "#E6F1FB",
+    "id": "breweries",
+    "label": "Breweries",
+    "color": "#B8893A",
+    "bg": "#F5EDD8",
     "icon": "🍺",
     "passportLayer": false,
-    "description": "Breweries, cocktail bars, wine bars, bottle shops"
+    "description": "Breweries and taprooms"
   },
   {
-    "id": "food",
-    "label": "Food",
-    "color": "#2A7A4A",
-    "bg": "#EAF3DE",
+    "id": "restaurants",
+    "label": "Restaurants",
+    "color": "#8B3A2E",
+    "bg": "#FAE8DC",
     "icon": "🍽",
     "passportLayer": false,
     "description": "Restaurants and eateries"
   },
   {
-    "id": "tattoo",
-    "label": "Tattoo",
-    "color": "#7A2A7A",
-    "bg": "#F5E6F5",
-    "icon": "🖋",
+    "id": "bars",
+    "label": "Bars & Spirits",
+    "color": "#2C1810",
+    "bg": "#EDE8E4",
+    "icon": "🌙",
     "passportLayer": false,
-    "description": "Tattoo studios — West AVL has an extraordinary concentration"
+    "description": "Bars and distilleries"
   },
   {
-    "id": "cannabis",
-    "label": "Cannabis",
-    "color": "#3A7A3A",
-    "bg": "#E6F3E6",
-    "icon": "🌿",
+    "id": "museums",
+    "label": "Museums",
+    "color": "#5C3A1A",
+    "bg": "#F5EDD8",
+    "icon": "🏛",
     "passportLayer": false,
-    "description": "Hemp, CBD, and cannabinoid shops"
+    "description": "Museums and history sites"
   },
   {
-    "id": "clothing",
-    "label": "Clothing",
-    "color": "#C04A1A",
-    "bg": "#FAECE7",
-    "icon": "👗",
-    "passportLayer": false,
-    "description": "Vintage, consignment, and independent clothing boutiques"
-  },
-  {
-    "id": "books",
-    "label": "Books",
-    "color": "#1A3A6A",
+    "id": "arts",
+    "label": "Arts",
+    "color": "#2A4A6A",
     "bg": "#E6EDF8",
-    "icon": "📖",
+    "icon": "🎨",
     "passportLayer": false,
-    "description": "Bookstores — Haywood has three, each completely different"
+    "description": "Art centers and galleries"
   },
   {
-    "id": "plants",
-    "label": "Plants",
-    "color": "#2a6b2a",
-    "bg": "#E8F5E8",
-    "icon": "🌱",
+    "id": "history",
+    "label": "History",
+    "color": "#5C3A1A",
+    "bg": "#F5EDD8",
+    "icon": "🏔",
     "passportLayer": false,
-    "description": "Plant shops and botanical spaces"
+    "description": "Historic sites and territorial landmarks"
+  },
+  {
+    "id": "outdoors",
+    "label": "Outdoors",
+    "color": "#2A4A2A",
+    "bg": "#EAF3DE",
+    "icon": "🌊",
+    "passportLayer": false,
+    "description": "Parks, trails, and Clear Creek"
+  },
+  {
+    "id": "music",
+    "label": "Music",
+    "color": "#8B3A2E",
+    "bg": "#FAE8DC",
+    "icon": "🎵",
+    "passportLayer": false,
+    "description": "Live music venues"
+  },
+  {
+    "id": "attractions",
+    "label": "Attractions",
+    "color": "#B8893A",
+    "bg": "#F5EDD8",
+    "icon": "⭐",
+    "passportLayer": false,
+    "description": "Must-see Golden stops"
   }
 ]

@@ -24,8 +24,9 @@ const ibmMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Haywood Road Ledger — West Asheville Coffee Walk',
-  description: 'A walking ledger for Haywood Road, West Asheville NC. Ten stops. One road. Walk it.',
+  title: 'Golden Walkbook',
+  description: 'A walking passport for Washington Avenue — the brewery town at the foot of the Rockies, where Clear Creek runs cold and the Mines campus ends the walk. Golden, Colorado.',
+  keywords: ['Golden Colorado', 'Washington Avenue', 'Coors Brewery', 'walking guide', 'Colorado School of Mines', 'Front Range'],
 }
 
 export default function RootLayout({

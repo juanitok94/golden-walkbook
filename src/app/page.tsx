@@ -18,33 +18,27 @@ export default function Home() {
       {/* HEADER */}
       <div className="bg-[#3b1f0a] px-6 py-10 text-center border-b-4 border-[#c8973a]">
         <p className="text-[#c8973a] text-xs tracking-[0.3em] uppercase mb-2 font-mono">
-           West Asheville, NC
+          Golden, CO
         </p>
         <h1 className="font-serif text-5xl font-black text-[#f5edd8] leading-none">
-          Haywood Road
+          The front porch
         </h1>
         <h2 className="font-serif text-4xl italic text-[#c8973a] leading-none mt-1">
-          Ledger
+          of the Rockies.
         </h2>
         <p className="text-[#e8d9b8] text-sm italic mt-3 opacity-70">
-          Along Haywood Road
+          Washington Avenue · Golden, Colorado
         </p>
         <div className="flex items-center justify-center gap-3 mt-4 text-[#c8973a] opacity-50 text-sm">
-          <span>☕</span><span>✦</span><span>☕</span>
+          <span>🍺</span><span>✦</span><span>🍺</span>
         </div>
       </div>
 
       {/* INTRO */}
       <div className="max-w-2xl mx-auto px-6 py-10">
         <p className="font-serif text-lg leading-relaxed text-[#1a1208]">
-          Haywood Road has carried people west for over a century,
-          first as the old turnpike toward Haywood County. Today it
-          holds ten coffee shops that each feel like their own place.
-        </p>
-        <p className="font-serif text-lg leading-relaxed text-[#1a1208] mt-4">
-          This passport is a way to walk it. Start on the east
-          end and keep going. After I-240 it gets quieter. That's
-          where the road opens up.
+          Ten stops on Washington Avenue — a free brewery tour, a distillery speakeasy,
+          an art center in a church, and a geology museum with a moon rock.
         </p>
 
         {/* CTA */}
@@ -56,7 +50,7 @@ export default function Home() {
                      hover:translate-y-[-1px] hover:shadow-[4px_4px_0_#3b1f0a]
                      transition-all"
         >
-          Start Your Passport
+          Start walking →
         </Link>
 
         <Link
@@ -76,9 +70,9 @@ export default function Home() {
           <div className="flex-1 border-t border-dashed border-[#6b3f1e] opacity-30" />
         </div>
 
-        {/* East Haywood stops */}
+        {/* Creek Side stops */}
         <p className="font-mono text-[11px] tracking-widest text-[#6b3f1e] opacity-80 uppercase mb-4 border-l-2 border-[#c8973a]/40 pl-3">
-          East Haywood
+          The Creek Side
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
@@ -114,9 +108,9 @@ export default function Home() {
           ))}
         </div>
 
-        {/* West Haywood stops */}
+        {/* Mines Side stops */}
         <p className="font-mono text-[11px] tracking-widest text-[#6b3f1e] opacity-80 uppercase mb-4 border-l-2 border-[#c8973a]/40 pl-3">
-          West Haywood
+          The Mines Side
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -184,12 +178,12 @@ export default function Home() {
       {/* FOOTER */}
       <div className="bg-[#3b1f0a] px-6 py-8 text-center border-t-2 border-[#c8973a]">
         <p className="font-serif italic text-[#e8d9b8] text-sm opacity-70 leading-relaxed">
-          Made with love by a seven-year West Asheville resident.
+          Made with love for Washington Avenue.
           <br />
-          These aren't just coffee shops — they're the living room of the neighborhood.
+          These aren't just stops — they're the living room of Golden.
         </p>
         <p className="font-mono text-[10px] text-[#c8973a] opacity-50 tracking-widest mt-4">
-          #HaywoodHoppers · #WestAVLCoffee · #AVLLocal
+          #GoldenWalkbook · #GoldenCO · #GoldenLocal
         </p>
       </div>
 

@@ -1,100 +1,72 @@
 [
   {
-    "shopId": "cooperative-coffee-roasters",
-    "question": "Cooperative roasts their own beans in-house. What are the names of their two signature roast lines?",
-    "answer": "Gravity and Levity — two named roasts that regulars request by name. The names say everything about how they think about coffee.",
-    "difficulty": "local",
-    "category": "coffee-culture"
+    "id": "coors-water",
+    "stopId": "coors-brewery-tour",
+    "question": "Adolph Coors chose Golden in 1873 for one reason. What was it?",
+    "answer": "The water — Clear Creek running cold and clear out of the Rocky Mountains. Coors believed the water was essential to the beer. The Rocky Mountain spring water sourcing has been a marketing claim ever since, though the water is now treated and processed like any industrial brewery.",
+    "category": "history"
   },
   {
-    "shopId": "battlecat-coffee-bar",
-    "question": "BattleCat is known for a savory pastry that's technically a Czech-Texan street food. What is it, and what's the best flavor?",
-    "answer": "Kolaches — doughy pastries filled with sausage, cheese, or jalapeño. The jalapeño is the answer, but it sells out by 9am on weekends.",
-    "difficulty": "visitor",
+    "id": "clear-creek-kayak",
+    "stopId": "clear-creek-history-park",
+    "question": "Clear Creek through Golden has a whitewater kayak course. What class of rapids does it run?",
+    "answer": "Class II-III rapids through the center of downtown Golden — unusual enough that the town hosts national kayaking competitions. The creek drops several feet through downtown, creating consistent whitewater visible from Washington Avenue.",
+    "category": "outdoors"
+  },
+  {
+    "id": "golden-capital",
+    "stopId": "golden-history-museum",
+    "question": "Golden was Colorado's territorial capital before Denver. Why did the capital move?",
+    "answer": "Denver grew faster after the railroads came through and had more political and economic power. The capital was moved to Denver in 1867, four years before Colorado achieved statehood. Golden never fully recovered its political prominence but kept its industrial identity through Coors.",
+    "category": "history"
+  },
+  {
+    "id": "buffalo-rose-bison",
+    "stopId": "buffalo-rose",
+    "question": "Are bison and buffalo the same animal?",
+    "answer": "No — American bison (Bison bison) are not true buffalo. True buffalo are found in Africa and Asia. The name buffalo stuck in America because early European settlers used it loosely. Bison were nearly extinct by 1900; the population is now around 500,000, mostly on ranches.",
+    "category": "nature"
+  },
+  {
+    "id": "miners-alley-name",
+    "stopId": "miners-alley-performing-arts",
+    "question": "Why is the alley behind Washington Avenue called Miners Alley?",
+    "answer": "During the gold rush era, miners would trade, drink, and conduct business in the alley behind the main commercial street — keeping the front of Washington Avenue for respectable commerce. The alley became its own economy. The name survived as the neighborhood was redeveloped.",
+    "category": "history"
+  },
+  {
+    "id": "golden-moon-absinthe",
+    "stopId": "golden-moon-speakeasy",
+    "question": "Absinthe was banned in the United States for almost 100 years. When was the ban lifted?",
+    "answer": "2007 — the TTB (Alcohol and Tobacco Tax and Trade Bureau) revised regulations that had kept absinthe illegal since 1912. The ban was based on the belief that thujone in wormwood caused hallucinations, which was largely debunked. Golden Moon was one of the early craft producers after legalization.",
     "category": "food"
   },
   {
-    "shopId": "asheville-kava-coffee",
-    "question": "Kava X Coffee serves kava alongside espresso. Kava is a traditional calming beverage from which part of the world?",
-    "answer": "The Pacific Islands — particularly Fiji, Vanuatu, and Tonga. Made from the root of the pepper plant, kava is used socially and ceremonially for its calming effects.",
-    "difficulty": "visitor",
-    "category": "culture"
+    "id": "golden-mill-creek",
+    "stopId": "the-golden-mill",
+    "question": "Clear Creek flows through Golden from where to where?",
+    "answer": "From the Continental Divide above Idaho Springs, through Clear Creek Canyon and downtown Golden, and then northeast to join the South Platte River near Denver. The total length is about 60 miles. The section through Golden drops enough elevation to create the whitewater in the center of town.",
+    "category": "geography"
   },
   {
-    "shopId": "haywood-famous",
-    "question": "Haywood Famous specializes in Cuban coffee. What's the difference between a cortadito and a café con leche?",
-    "answer": "A cortadito is espresso cut with a small amount of steamed milk — bold and strong. A café con leche is espresso with roughly equal parts steamed milk — much creamier and milder. Eva's version of both is the real thing.",
-    "difficulty": "visitor",
-    "category": "coffee-culture"
-  },
-  {
-    "shopId": "deep-time-coffee",
-    "question": "Deep Time Coffee takes its name from a geological concept. What does 'deep time' actually mean in geology, and approximately how old is the Earth?",
-    "answer": "Deep time refers to the vast timescales of Earth's history — the planet is approximately 4.5 billion years old. The concept was developed by geologist James Hutton in the 18th century. Quite a name for a coffee shop that makes every cup feel unhurried.",
-    "difficulty": "curious",
-    "category": "history"
-  },
-  {
-    "shopId": "bad-manners-coffee",
-    "question": "Bad Manners sources their coffee from Tandem Coffee Roasters. Where is Tandem based, and what makes their roasting style distinctive?",
-    "answer": "Tandem is based in Portland, Maine — one of the country's most respected specialty roasters. They're known for bright, clean roasts that highlight origin character rather than roasting flavor. Maine quietly punches above its weight in specialty coffee.",
-    "difficulty": "curious",
-    "category": "coffee-culture"
-  },
-  {
-    "shopId": "rowan-coffee",
-    "question": "Rowan serves oysters on Friday afternoons. The classic wine pairing for oysters is a crisp white from which French region?",
-    "answer": "Muscadet from the Loire Valley is the classic match — high acid, mineral, and bone dry. Chablis works too. Both cut through the brine without overwhelming it. Rowan probably has a perfect pairing already selected.",
-    "difficulty": "curious",
-    "category": "food-and-drink"
-  },
-  {
-    "shopId": "odds-cafe",
-    "question": "Odd's signature Aztec mocha gets its kick from a spice the ancient Aztecs combined with chocolate. What spice, and what did they call the original drink?",
-    "answer": "Chili pepper — capsaicin. The Aztecs called their ceremonial cacao and chili drink xocolatl. It was bitter, spicy, and nothing like modern hot chocolate. Odd's Aztec mocha carries that tradition into a latte.",
-    "difficulty": "visitor",
-    "category": "history"
-  },
-  {
-    "shopId": "plant-bar",
-    "question": "Plant Bar serves drinks featuring Blue Lotus. Blue lotus was a sacred plant in which ancient civilization, and what was it used for?",
-    "answer": "Ancient Egypt — Nymphaea caerulea (blue lotus) appears throughout Egyptian art and hieroglyphics. It was associated with the sun god Ra and used in ceremonial contexts for its mildly euphoric and calming properties. The Egyptians were ahead of the wellness trend by about 3,000 years.",
-    "difficulty": "curious",
-    "category": "history"
-  },
-  {
-    "shopId": "izzys-coffee-house",
-    "question": "Izzy's sits at the far west end of Haywood Road. The road itself is named after its western destination — what county does Haywood Road lead to?",
-    "answer": "Haywood County — the road was originally the Western Turnpike from Asheville toward Waynesville in Haywood County. That's where the name comes from. West Asheville was built along a road named for somewhere further west, which feels right.",
-    "difficulty": "local",
-    "category": "history"
-  },
-  {
-    "shopId": "owl-bakery",
-    "question": "OWL Bakery's cardamom bun has been described as a cinnamon roll and a croissant having a very good idea together. What technique makes a croissant's layers possible?",
-    "answer": "Lamination — repeatedly folding cold butter into dough to create hundreds of distinct layers. The process takes days and requires careful temperature control. When done well, the layers shatter and melt simultaneously. OWL does it well.",
-    "difficulty": "curious",
+    "id": "woodys-wood-fired",
+    "stopId": "woody-wood-fired-pizza",
+    "question": "What temperature does a wood-fired pizza oven reach, and why does it matter?",
+    "answer": "Wood-fired pizza ovens reach 700-900°F — far hotter than a conventional home oven's 550°F maximum. The extreme heat cooks the crust in 90 seconds to 2 minutes, creating the char on the bottom and the bubbled, blistered edge that can't be replicated in a standard oven.",
     "category": "food"
   },
   {
-    "shopId": "flora-forage",
-    "question": "Forage at Flora serves Tulsi Rose tea as a signature drink. Tulsi is also known as Holy Basil — where does it originate and what is it traditionally used for?",
-    "answer": "Tulsi originates in the Indian subcontinent and has been used in Ayurvedic medicine for over 3,000 years. It's considered an adaptogen — believed to help the body manage stress. The combination with rose makes for a floral, calming drink that's unlike anything else on Haywood Road.",
-    "difficulty": "curious",
-    "category": "culture"
+    "id": "foothills-church",
+    "stopId": "foothills-art-center",
+    "question": "The Foothills Art Center is in a former church. What architectural style is the building?",
+    "answer": "Gothic Revival — characterized by pointed arches, steep rooflines, and vertical emphasis meant to evoke medieval European cathedrals. It was a popular style for American churches in the late 19th century. The building dates to the 1870s.",
+    "category": "architecture"
   },
   {
-    "shopId": "firestorm-books-coffee",
-    "question": "Firestorm Books & Coffee is worker-owned and describes itself as an anti-capitalist business. What formal decision-making process does the collective use internally?",
-    "answer": "Formal consensus — a process where decisions require agreement from all participants rather than majority vote. Each member has equal voice and veto power. It's slower than voting but produces decisions the whole group can commit to. Firestorm has run this way since 2008.",
-    "difficulty": "local",
-    "category": "culture"
-  },
-  {
-    "shopId": "mocha-box-coffee",
-    "question": "Mocha Box specializes in Yemeni coffee culture. Yemen is considered the birthplace of coffee cultivation — approximately when did coffee drinking as a practice begin there?",
-    "answer": "Around the 15th century in the Sufi monasteries of Yemen — monks used coffee to stay awake for nighttime prayer. The port city of Mocha (Al-Mukha) gave its name to the mocha coffee drink and was the world's primary coffee export hub for centuries. Mocha Box carries that history.",
-    "difficulty": "curious",
-    "category": "history"
+    "id": "mines-moon-rock",
+    "stopId": "mines-museum-earth-science",
+    "question": "The Mines Museum has a moon rock from the Apollo program. Which mission brought it back?",
+    "answer": "The museum displays samples from multiple Apollo missions. Colorado School of Mines had deep connections to NASA's geological training programs — astronauts trained here to identify rock types on the lunar surface. The samples are some of the oldest materials humans have ever touched.",
+    "category": "science"
   }
 ]
