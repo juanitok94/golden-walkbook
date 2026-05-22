@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Washington Ave Walkbook · Golden, CO · Peachy Kean DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #0e1c2f;
+      --surface:  #1a2d45;
+      --border:   #2c4468;
+      --primary:  #5a9fd4;
+      --accent:   #c0c8d8;
+      --text:     #e8f0f8;
+      --muted:    #7a98b8;
+      --badge-bg: rgba(90,159,212,0.15);
+      --badge-fg: #9bbde0;
+      --badge-bd: rgba(90,159,212,0.28);
+      --shadow:   rgba(0,0,0,0.45);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Crimson Pro', Georgia, serif; font-size: 16px; line-height: 1.6; }
+
+    .hero { text-align: center; padding: 3.5rem 1.5rem 3rem; background: #07111e; border-bottom: 4px solid var(--primary); }
+    .hero-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 8vw, 4rem); color: #fff; line-height: 1.1; margin-bottom: 0.4rem; }
+    .hero-street { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 0.75rem; }
+    .hero-tagline { font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.5); max-width: 34rem; margin: 0 auto 1.75rem; }
+    .hero-cta { display: inline-block; padding: 0.6rem 1.5rem; background: var(--primary); color: #fff; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
+    .hero-cta:hover { opacity: 0.85; }
+
+    .pitch { max-width: 50rem; margin: 0 auto; padding: 2.5rem 1.5rem 2rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .pitch h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; color: var(--text); margin-bottom: 0.65rem; }
+    .pitch p { font-size: 1.05rem; color: var(--muted); max-width: 36rem; margin: 0 auto 1.5rem; }
+    .pitch-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); line-height: 1; }
+    .stat-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+    .filters { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0.7rem 1.25rem; display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; }
+    .filters::-webkit-scrollbar { display: none; }
+    .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.7rem; border: 1px solid var(--border); background: var(--surface); color: var(--muted); cursor: pointer; white-space: nowrap; transition: all 0.12s; }
+    .filter-btn:hover { color: var(--primary); border-color: var(--primary); }
+    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    .cards { max-width: 74rem; margin: 0 auto; padding: 1.75rem 1.25rem 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 1.1rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); padding: 1.1rem 1.2rem; transition: transform 0.12s, box-shadow 0.12s; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 18px var(--shadow); }
+    .card-bar { height: 3px; margin: -1.1rem -1.2rem 0.9rem; }
+    .card-stop { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .card-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; color: var(--text); line-height: 1.2; margin-bottom: 0.2rem; }
+    .card-addr { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-bottom: 0.7rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.65rem; }
+    .badge { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.18rem 0.45rem; background: var(--badge-bg); color: var(--badge-fg); border: 1px solid var(--badge-bd); }
+    .card-hours { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .card-tip { font-style: italic; font-size: 0.87rem; color: var(--text); border-left: 2px solid var(--primary); padding-left: 0.6rem; margin-bottom: 0.6rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; }
+    .card-rating { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--muted); }
+    .card-links { display: flex; gap: 0.65rem; }
+    .card-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    .card-link:hover { opacity: 0.65; }
+
+    .footer { background: #07111e; color: rgba(255,255,255,0.45); text-align: center; padding: 2.5rem 1.5rem; border-top: 3px solid var(--primary); }
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: rgba(255,255,255,0.85); margin-bottom: 0.35rem; }
+    .footer-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 1.1rem; }
+    .footer-cta { display: inline-block; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.65); font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+    .footer-cta:hover { border-color: var(--primary); color: var(--primary); }
+
+    @media (max-width: 460px) { .cards { grid-template-columns: 1fr; padding: 1.25rem 1rem 2.5rem; } }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">Peachy Kean DevOps LLC · Walkbook Sample</div>
+  <h1 class="hero-title">Golden Walkbook</h1>
+  <div class="hero-street">Washington Avenue · Golden, CO 80401</div>
+  <p class="hero-tagline">Clear Creek. The brewery. The mine school. Walk it.</p>
+  <a href="/" class="hero-cta">Open the Full Walkbook ↗</a>
+</header>
+
+<section class="pitch">
+  <h2>What is a Walkbook?</h2>
+  <p>A mobile-first digital passport for your street. Visitors collect stamps, discover insider tips, and stay longer than they planned. No app download. No login. Just walk.</p>
+  <div class="pitch-stats">
+    <div><div class="stat-num">10</div><div class="stat-lbl">Core Stops</div></div>
+    <div><div class="stat-num">0</div><div class="stat-lbl">Ads</div></div>
+    <div><div class="stat-num">∞</div><div class="stat-lbl">Local</div></div>
+  </div>
+</section>
+
+<nav class="filters" id="filters"></nav>
+<main class="cards" id="cards"></main>
+
+<footer class="footer">
+  <div class="footer-brand">Peachy Kean DevOps, LLC</div>
+  <div class="footer-sub">Walkbooks for independent business districts</div>
+  <a href="mailto:john@peachykeandev.com" class="footer-cta">Get a Walkbook for your street →</a>
+</footer>
+
+<script>
+const SHOPS = [
+  {id:"coors-brewery-tour",name:"Coors Brewery Tour",address:"502 14th St",city:"Golden",state:"CO",layers:["breweries","attractions"],passportStop:1,selloColor:"#B8893A",rating:4.6,instagram:"coorsbrewerytour",website:"https://www.coorsbrewerytour.com/",hours:{mon:"closed",tue:"10AM–4PM",wed:"10AM–4PM",thu:"10AM–4PM",fri:"10AM–4PM",sat:"10AM–4PM",sun:"10AM–4PM"},tip:"Tuesday through Thursday lines are shortest. The Banquet beer in the tasting room tastes different here than anywhere else."},
+  {id:"clear-creek-history-park",name:"Clear Creek History Park",address:"1020 11th St",city:"Golden",state:"CO",layers:["outdoors","history"],passportStop:2,selloColor:"#5C3A1A",rating:4.5,instagram:null,website:"https://www.goldenhistory.org/visit/history-park/",hours:{mon:"6AM–10PM",tue:"6AM–10PM",wed:"6AM–10PM",thu:"6AM–10PM",fri:"6AM–10PM",sat:"6AM–10PM",sun:"6AM–10PM"},tip:"Locals sit at the creek edge on weekday afternoons — quieter than Washington Ave and five degrees cooler near the water."},
+  {id:"golden-history-museum",name:"Golden History Museum",address:"923 10th St",city:"Golden",state:"CO",layers:["museums","history"],passportStop:3,selloColor:"#5C3A1A",rating:4.5,instagram:"goldenhistorymuseum",website:"https://www.goldenhistory.org/",hours:{mon:"closed",tue:"10AM–4:30PM",wed:"10AM–4:30PM",thu:"10AM–4:30PM",fri:"10AM–4:30PM",sat:"10AM–4:30PM",sun:"10AM–4:30PM"},tip:"The volunteer staff are often working historians who know things the exhibits don't say. Free admission."},
+  {id:"buffalo-rose",name:"Buffalo Rose",address:"1119 Washington Ave",city:"Golden",state:"CO",layers:["restaurants","music"],passportStop:4,selloColor:"#8B3A2E",rating:4.4,instagram:"buffalorosegolden",website:"https://buffalorosegolden.com/",hours:{mon:"11AM–9PM",tue:"11AM–9PM",wed:"11AM–9PM",thu:"11AM–9PM",fri:"11AM–11PM",sat:"11AM–11PM",sun:"10AM–9PM"},tip:"The back-corner booths have the best sight lines to the stage. Order the bison burger. Live music calendar posted monthly."},
+  {id:"miners-alley-performing-arts",name:"Miners Alley Performing Arts Center",address:"1100 Miners Alley",city:"Golden",state:"CO",layers:["arts","attractions"],passportStop:5,selloColor:"#2A4A6A",rating:4.7,instagram:"minersalley",website:"https://minersalley.com/",hours:{mon:"closed",tue:"12PM–5PM",wed:"12PM–5PM",thu:"12PM–5PM",fri:"12PM–8PM",sat:"12PM–8PM",sun:"12PM–5PM"},tip:"The lobby bar opens an hour before curtain — locals use it as the pre-show spot. The alley entrance feels like you're discovering something."},
+  {id:"golden-moon-speakeasy",name:"Golden Moon Speakeasy",address:"1111 Miners Alley",city:"Golden",state:"CO",layers:["bars"],passportStop:6,selloColor:"#2C1810",rating:4.5,instagram:"goldenmoonspeakeasy",website:"https://goldenmoondistillery.com/speakeasy/",hours:{mon:"closed",tue:"4PM–10PM",wed:"4PM–10PM",thu:"4PM–10PM",fri:"4PM–12AM",sat:"4PM–12AM",sun:"4PM–10PM"},tip:"The absinthe cocktails are what locals order first — Golden Moon produces one of the best craft absinthes in the country. Ask about the spirit flights."},
+  {id:"the-golden-mill",name:"The Golden Mill",address:"1012 Ford St",city:"Golden",state:"CO",layers:["restaurants","bars"],passportStop:7,selloColor:"#5C3A1A",rating:4.5,instagram:"the_golden_mill",website:"https://www.thegoldenmill.com/",hours:{mon:"11AM–9PM",tue:"11AM–9PM",wed:"11AM–9PM",thu:"11AM–9PM",fri:"11AM–10PM",sat:"11AM–10PM",sun:"11AM–9PM"},tip:"Locals go to the creek-facing edge of the rooftop — you get the water below and the mountains behind it."},
+  {id:"woody-wood-fired-pizza",name:"Woody's Wood Fired Pizza",address:"1305 Washington Ave",city:"Golden",state:"CO",layers:["restaurants"],passportStop:8,selloColor:"#8B3A2E",rating:4.4,instagram:"woodyspizza",website:"https://woodysgolden.com/",hours:{mon:"11AM–9PM",tue:"11AM–9PM",wed:"11AM–9PM",thu:"11AM–9PM",fri:"11AM–10PM",sat:"11AM–10PM",sun:"11AM–9PM"},tip:"The patio is the seat. The wood-fired flavor is most pronounced on the crust edge. Come weekday lunches when the tourist traffic is thin."},
+  {id:"foothills-art-center",name:"Foothills Art Center",address:"809 15th St",city:"Golden",state:"CO",layers:["arts","museums"],passportStop:9,selloColor:"#2A4A6A",rating:4.6,instagram:"foothillsartcenter",website:"https://foothillsartcenter.org/",hours:{mon:"closed",tue:"10AM–5PM",wed:"10AM–5PM",thu:"10AM–5PM",fri:"10AM–5PM",sat:"10AM–5PM",sun:"12PM–5PM"},tip:"The national juried exhibitions draw submissions from across the country — the quality is higher than most people expect. Free admission."},
+  {id:"mines-museum-earth-science",name:"Mines Museum of Earth Science",address:"1310 Maple St",city:"Golden",state:"CO",layers:["museums","attractions"],passportStop:10,selloColor:"#5C3A1A",rating:4.7,instagram:"minesmuseum",website:"https://www.mines.edu/museumofearthscience/",hours:{mon:"9AM–4PM",tue:"9AM–4PM",wed:"9AM–4PM",thu:"9AM–4PM",fri:"9AM–4PM",sat:"9AM–4PM",sun:"1PM–4PM"},tip:"Free parking on Maple St on weekends. Go straight to the gem and mineral cases and the moon rock. Colorado School of Mines campus."}
+];
+
+const LABELS = {coffee:"☕ Coffee",restaurants:"🍽 Food",bars:"🍺 Bar",breweries:"🍻 Brewery",music:"🎵 Music",arts:"🎨 Arts",galleries:"🖼 Gallery",museums:"🏛 Museum",attractions:"⭐ Must-See",shops:"🛍 Shop",history:"📜 History",outdoors:"🏔 Outdoors",bakery:"🥐 Bakery",wineries:"🍷 Winery",lodging:"🛏 Lodging",historic:"🏠 Historic",food:"🍜 Food",cannabis:"🌿 Wellness"};
+
+function hrs(h) {
+  const days = ['mon','tue','wed','thu','fri','sat','sun'];
+  const open = days.filter(d => h[d] && !h[d].toLowerCase().includes('closed') && !h[d].toLowerCase().includes('private'));
+  if (!open.length) return '— see website';
+  const times = [...new Set(open.map(d => h[d]))];
+  if (times.length === 1 && open.length === 7) return 'Daily · ' + times[0];
+  if (times.length === 1) return open.length + ' days/wk · ' + times[0];
+  return open.length + ' days/wk · from ' + h[open[0]];
+}
+
+function render(filter) {
+  const list = filter === 'all' ? SHOPS : SHOPS.filter(s => s.layers.includes(filter));
+  document.getElementById('cards').innerHTML = list.map(s => {
+    const links = [
+      s.website ? `<a class="card-link" href="${s.website.startsWith('http')?s.website:'https://'+s.website}" target="_blank" rel="noopener">Website ↗</a>` : '',
+      s.instagram ? `<a class="card-link" href="https://instagram.com/${s.instagram}" target="_blank" rel="noopener">Instagram ↗</a>` : ''
+    ].filter(Boolean).join('');
+    return `<article class="card">
+      <div class="card-bar" style="background:${s.selloColor||'var(--primary)'}"></div>
+      ${s.passportStop ? `<div class="card-stop">Stop ${s.passportStop} of 10</div>` : ''}
+      <h2 class="card-name">${s.name}</h2>
+      <div class="card-addr">${s.address} · ${s.city}, ${s.state}</div>
+      <div class="badges">${s.layers.map(l=>`<span class="badge">${LABELS[l]||l}</span>`).join('')}</div>
+      <div class="card-hours">⏱ ${hrs(s.hours)}</div>
+      ${s.tip ? `<div class="card-tip">${s.tip}</div>` : ''}
+      <div class="card-meta">
+        ${s.rating ? `<span class="card-rating">★ ${s.rating.toFixed(1)}</span>` : '<span></span>'}
+        ${links ? `<div class="card-links">${links}</div>` : ''}
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function init() {
+  const layers = [...new Set(SHOPS.flatMap(s => s.layers))].filter(l => LABELS[l]);
+  const nav = document.getElementById('filters');
+  nav.innerHTML = `<button class="filter-btn active" data-f="all">All (${SHOPS.length})</button>` +
+    layers.map(l => {
+      const n = SHOPS.filter(s => s.layers.includes(l)).length;
+      return `<button class="filter-btn" data-f="${l}">${LABELS[l]} (${n})</button>`;
+    }).join('');
+  nav.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    nav.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.f);
+  });
+}
+
+init();
+render('all');
+</script>
+</body>
+</html>
